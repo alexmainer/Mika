@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container text-centre">
+    <div class="table">
+        <table>
+            <tr>
+                <th>Manufacturer</th>
+                <th>Model Name</th>
+                <th>Model Year</th>
+                <th>Engine Capacity</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Mercedes</td>
+                <td>E350</td>
+                <td>2016</td>
+                <td>2000CC</td>
+                <td>KSH 3,500,000</td>
+                <td><a class="btn btn-success" type="button" href="{% url 'app:pay' %}">BUY</a></td>
+            </tr>
+            <tr>
+                <td>Audi</td>
+                <td>SQ7</td>
+                <td>2019</td>
+                <td>3500CC</td>
+                <td>KSH 5,000,000</td>
+                <td><a class="btn btn-success" type="button" href="{% url 'app:pay' %}">BUY</a></td>
+            </tr>
+            <tr>
+                <td>BMW</td>
+                <td>X6</td>
+                <td>2022</td>
+                <td>3000CC</td>
+                <td>KSH 6,000,000</td>
+                <td><a class="btn btn-success" type="button" href="{% url 'app:pay' %}">BUY</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+{% endblock %}
