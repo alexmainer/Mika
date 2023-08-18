@@ -1,13 +1,40 @@
 import json
 import requests
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from requests.auth import HTTPBasicAuth
 from .credentials import MpesaAccessToken, LipanaMpesaPpassword
+from .forms import RegisterForm, LogInForm
 
 
+# ------------------index page-------------------------------------
 def index(request):
     return render(request, 'index.html')
+
+
+# ------------------register page/View-------------------------------------
+def register(request):
+    form = RegisterForm()
+
+    if request.method == "POST":
+        form = RegisterForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+
+    context = {'form': form}
+
+    return render(request, 'register.html', context=context)
+
+
+# ------------------login page-------------------------------------
+def login(request):
+    return render(request, 'login.html')
+
+
+# ------------------home page-------------------------------------
+def home(request):
+    return render(request, 'home.html')
 
 
 def lib(request):

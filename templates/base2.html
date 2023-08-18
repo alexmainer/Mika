@@ -47,70 +47,70 @@
           <img src="{% static 'img/mh.png' %}" alt="Bootstrap" width="130" height="60">
         </a>
       </div>
-{#      <div class="container-fluid">#}
+      <div class="container-fluid">
 
 {#      -----------------------AUTHENTICATION-------------------------------------------#}
 
-{#       <ul class="navbar-nav mr-auto">#}
+           <ul class="navbar-nav mr-auto">
 
-{#         {% if user.is_authenticated %}#}
-{##}
-{#            <li class="nav-item">#}
-{##}
-{#              <a class="nav-link" href="{% url 'app:login' %}">LogIn &nbsp; <i class="fa fa-home" aria-hidden="true"></i> </a>#}
-{##}
-{#            </li>#}
-{##}
-{##}
-{#            &nbsp;     &nbsp;     &nbsp;#}
-{##}
-{##}
-{##}
-{##}
-{#            <li class="nav-item">#}
-{##}
-{#              <a class="nav-link" href="{% url '#' %}">Sign out &nbsp; <i class="fa fa-sign-out" aria-hidden="true"></i> </a>#}
-{##}
-{#            </li>#}
-{#             </ul>#}
-{##}
-{#        {% else %}#}
-{##}
-{#        <li class="nav-item">#}
-{##}
-{#          <a class="nav-link" href="{% url 'app:register' %}"> Register </a>#}
-{##}
-{#        </li>#}
-{##}
-{##}
-{#        &nbsp;     &nbsp;     &nbsp;#}
-{##}
-{##}
-{#        <li class="nav-item">#}
-{##}
-{#          <a class="nav-link" href="{% url 'app:login' %}">Login</a>#}
-{##}
-{#        </li>#}
-{##}
-{##}
-{#        {% endif %}#}
+             {% if user.is_authenticated %}
 
-{#      --------------------------END OF AUTHENTICATION-----------------------------#}
+                <li class="nav-item">
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
+                  <a class="nav-link" href="{% url 'app:login' %}">LogIn &nbsp; <i class="fa fa-home" aria-hidden="true"></i> </a>
+
+                </li>
+
+
+                &nbsp;     &nbsp;     &nbsp;
+
+
+
+
+                <li class="nav-item">
+
+                  <a class="nav-link" href="{% url '#' %}">Sign out &nbsp; <i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+
+                </li>
+                 </ul>
+
+            {% else %}
+
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="{% url 'app:home' %}">Home</a>
+
+              <a class="nav-link" href="{% url 'app:register' %}"> Register </a>
+
             </li>
+
+
+            &nbsp;     &nbsp;     &nbsp;
+
+
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'app:libraries' %}">Libraries</a>
+
+              <a class="nav-link" href="{% url 'app:login' %}">Login</a>
+
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'app:contacts' %}">Contact us</a>
-            </li>
-          </ul>
-        </div>
-{#      </div>#}
+
+
+            {% endif %}
+
+    {#      --------------------------END OF AUTHENTICATION-----------------------------#}
+
+    {#        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">#}
+    {#          <ul class="navbar-nav">#}
+    {#            <li class="nav-item">#}
+    {#              <a class="nav-link " aria-current="page" href="{% url 'app:home' %}">Home</a>#}
+    {#            </li>#}
+    {#            <li class="nav-item">#}
+    {#              <a class="nav-link" href="{% url 'app:libraries' %}">Libraries</a>#}
+    {#            </li>#}
+    {#            <li class="nav-item">#}
+    {#              <a class="nav-link" href="{% url 'app:contacts' %}">Contact us</a>#}
+    {#            </li>#}
+    {#          </ul>#}
+    {#        </div>#}
+      </div>
     </nav>
 </div>
 

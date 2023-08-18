@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 
 {% block content %}
 <div class="form-container ">
@@ -7,7 +7,7 @@
         <form action="">
             {% csrf_token %}
             {{ form.as_p }}
-            <a class="btn btn-success" type="button" href="{% url 'app:register' %}">WELCOME</a>
+            <a class="btn btn-success" type="button" href="{% url 'app:home' %}">WELCOME</a>
         </form>
     </div>
 </div>

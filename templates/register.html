@@ -1,0 +1,34 @@
+{% extends 'base2.html' %}
+
+
+
+{% block content %}
+
+    <div class="container bg-light shadow-md p-5 form-layout">
+        <h3> REGISTER</h3>
+        <h5>fill the details below to proceed</h5>
+
+        <br>
+
+        <form method="POST" autocomplete="off">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <br>
+
+            <button type="submit" class="btn btn-success btn-block ">REGISTER</button>
+        </form>
+
+        <br>
+        <div class="text-centre">
+            <p> Already have an account?</p> <a href="{% url 'app:login' %}">LogIn</a>
+        </div>
+    </div>
+    <br>
+
+
+
+
+
+{% endblock %}
